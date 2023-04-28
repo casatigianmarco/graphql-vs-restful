@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Catalog.Api.GraphQL", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Catalog.Api.RESTful", "src\microservices\catalog\apis\TCC.Catalog.Api.RESTful\TCC.Catalog.Api.RESTful.csproj", "{4483CE1B-3101-4CA9-BB15-D7067B92CF6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Catalog.Persistence.Postgres", "src\microservices\catalog\persistence\TCC.Catalog.Persistence.Postgres\TCC.Catalog.Persistence.Postgres.csproj", "{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4483CE1B-3101-4CA9-BB15-D7067B92CF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4483CE1B-3101-4CA9-BB15-D7067B92CF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4483CE1B-3101-4CA9-BB15-D7067B92CF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{66C0E1EA-F37F-4BEB-9D7B-B8175ABCA214} = {EA5EDC6A-34F2-4E2F-BEBB-4CA58CB62448}
@@ -63,5 +69,6 @@ Global
 		{A4DD9FED-D870-44EA-B1EB-4739EE463B4F} = {CCA0162C-9650-462A-A25B-77C3DD16FD7B}
 		{CED45E8C-F764-4A99-B04D-623EB97EC598} = {DB141DA1-8E37-40E7-A892-52111CDFDE70}
 		{4483CE1B-3101-4CA9-BB15-D7067B92CF6C} = {DB141DA1-8E37-40E7-A892-52111CDFDE70}
+		{8A448AEE-30ED-436F-AD6E-CCCE19C6E952} = {CCA0162C-9650-462A-A25B-77C3DD16FD7B}
 	EndGlobalSection
 EndGlobal
