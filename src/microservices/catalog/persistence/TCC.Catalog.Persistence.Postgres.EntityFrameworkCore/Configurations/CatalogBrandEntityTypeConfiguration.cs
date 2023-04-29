@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TCC.Catalog.Domain.Entities;
 
-namespace TCC.Catalog.Persistence.Postgres.Configurations;
+namespace TCC.Catalog.Persistence.Postgres.EntityFrameworkCore.Configurations;
 
 public class CatalogBrandEntityTypeConfiguration : IEntityTypeConfiguration<CatalogBrand>
 {

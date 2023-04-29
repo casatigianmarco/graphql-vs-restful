@@ -13,7 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\domain\TCC.Catalog.Application\TCC.Catalog.Application.csproj" />
-      <ProjectReference Include="..\..\persistence\TCC.Catalog.Persistence.SqlServer\TCC.Catalog.Persistence.SqlServer.csproj" />
+      <ProjectReference Include="..\..\persistence\TCC.Catalog.Persistence.SqlServer.EntityFrameworkCore\TCC.Catalog.Persistence.SqlServer.EntityFrameworkCore.csproj" />
     </ItemGroup>
 
 </Project>

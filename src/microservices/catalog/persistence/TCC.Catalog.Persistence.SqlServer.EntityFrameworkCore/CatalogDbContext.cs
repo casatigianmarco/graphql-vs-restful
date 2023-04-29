@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace TCC.Catalog.Persistence.SqlServer;
+namespace TCC.Catalog.Persistence.SqlServer.EntityFrameworkCore;
 
 public class CatalogDbContext : DbContext
 {

@@ -2,28 +2,28 @@ using Microsoft.EntityFrameworkCore;
 using TCC.Catalog.Domain.Entities;
 using TCC.Catalog.Domain.Repositories;
 
-namespace TCC.Catalog.Persistence.Postgres.Repositories;
+namespace TCC.Catalog.Persistence.Postgres.EntityFrameworkCore.Repositories;
 
 public class CatalogRepository : ICatalogRepository
 {
-    private readonly CatalogDbContext _catalogDbContext;
+    private readonly PostgresCatalogDbContext _postgresCatalogDbContext;
 
-    public CatalogRepository(CatalogDbContext catalogDbContext)
+    public CatalogRepository(PostgresCatalogDbContext postgresCatalogDbContext)
     {
-        _catalogDbContext = catalogDbContext;
+        _postgresCatalogDbContext = postgresCatalogDbContext;
     }
 
     public async Task<CatalogItem> AddCatalogItem(CatalogItem catalogItem, CancellationToken cancellationToken)
     {
-        var catalogItemAdded = await _catalogDbContext.CatalogItems.AddAsync(catalogItem, cancellationToken);
-        await _catalogDbContext.SaveChangesAsync(cancellationToken);
+        var catalogItemAdded = await _postgresCatalogDbContext.CatalogItems.AddAsync(catalogItem, cancellationToken);
+        await _postgresCatalogDbContext.SaveChangesAsync(cancellationToken);
         return catalogItemAdded.Entity;
     }
 
     public async Task<CatalogItem> DeleteCatalogItem(CatalogItem catalogItem, CancellationToken cancellationToken)
     {
-        var catalogItemDeleted = _catalogDbContext.CatalogItems.Remove(catalogItem);
-        await _catalogDbContext.SaveChangesAsync(cancellationToken);
+        var catalogItemDeleted = _postgresCatalogDbContext.CatalogItems.Remove(catalogItem);
+        await _postgresCatalogDbContext.SaveChangesAsync(cancellationToken);
         return catalogItemDeleted.Entity;
     }
 
@@ -53,13 +53,13 @@ public class CatalogRepository : ICatalogRepository
 
     public IQueryable<CatalogItem> GetCatalogItemsQueryable()
     {
-        return _catalogDbContext.CatalogItems.AsQueryable();
+        return _postgresCatalogDbContext.CatalogItems.AsQueryable();
     }
 
     public async Task<CatalogItem> UpdateCatalogItem(CatalogItem catalogItem, CancellationToken cancellationToken)
     {
-        var catalogItemUpdated = _catalogDbContext.CatalogItems.Update(catalogItem);
-        await _catalogDbContext.SaveChangesAsync(cancellationToken);
+        var catalogItemUpdated = _postgresCatalogDbContext.CatalogItems.Update(catalogItem);
+        await _postgresCatalogDbContext.SaveChangesAsync(cancellationToken);
         return catalogItemUpdated.Entity;
     }
 }

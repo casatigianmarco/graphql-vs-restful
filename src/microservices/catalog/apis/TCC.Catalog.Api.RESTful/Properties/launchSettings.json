@@ -9,22 +9,15 @@
     }
   },
   "profiles": {
-    "TCC.Catalog.Api.Restful": {
+    "TCC.Catalog.Api.RESTful:Local:Postgres": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7113;http://localhost:5223",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "PostgresDbContextSettings:ConnectionString": "User ID=postgres;Password=tccsenaipa55w0rd;Host=localhost;Port=5432;Database=catalog;Pooling=true;"
       }
     }
   }
