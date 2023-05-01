@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "TCC.Catalog.Api.RESTful:Local:Postgres": {
+    "Senai.TCC.Catalog.Api.RESTful:Local:Postgres": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

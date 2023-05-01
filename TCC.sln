@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.TCC.Catalog.Api.Graph
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.TCC.Catalog.Api.RESTful", "src\microservices\catalog\apis\Senai.TCC.Catalog.Api.RESTful\Senai.TCC.Catalog.Api.RESTful.csproj", "{4483CE1B-3101-4CA9-BB15-D7067B92CF6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.Catalog.Persistence.Postgres.EFCore", "src\microservices\catalog\persistence\Senai.Catalog.Persistence.Postgres.EFCore\Senai.Catalog.Persistence.Postgres.EFCore.csproj", "{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.TCC.Catalog.Persistence.Postgres.EFCore", "src\microservices\catalog\persistence\Senai.TCC.Catalog.Persistence.Postgres.EFCore\Senai.TCC.Catalog.Persistence.Postgres.EFCore.csproj", "{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{06F934C9-6D89-4C7B-B6F6-9B9882A340F9}"
 EndProject

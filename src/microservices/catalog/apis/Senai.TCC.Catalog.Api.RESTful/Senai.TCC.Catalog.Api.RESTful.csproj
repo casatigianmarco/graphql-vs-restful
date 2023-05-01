@@ -14,7 +14,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\..\..\shared\Senai.TCC.Base\Senai.TCC.Base.csproj" />
       <ProjectReference Include="..\..\domain\Senai.TCC.Catalog.Application\Senai.TCC.Catalog.Application.csproj" />
-      <ProjectReference Include="..\..\persistence\Senai.Catalog.Persistence.Postgres.EFCore\Senai.Catalog.Persistence.Postgres.EFCore.csproj" />
+      <ProjectReference Include="..\..\persistence\Senai.TCC.Catalog.Persistence.Postgres.EFCore\Senai.TCC.Catalog.Persistence.Postgres.EFCore.csproj" />
       <ProjectReference Include="..\..\persistence\Senai.TCC.Catalog.Persistence.SqlServer.EFCore\Senai.TCC.Catalog.Persistence.SqlServer.EFCore.csproj" />
     </ItemGroup>
 

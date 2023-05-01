@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Senai.TCC.Catalog.Domain.Entities;
 using Senai.TCC.Catalog.Domain.Repositories;
 
-namespace Senai.Catalog.Persistence.Postgres.EFCore.Repositories;
+namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore.Repositories;
 
 public class CatalogRepository : ICatalogRepository
 {

@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Senai.Catalog.Persistence.Postgres.EFCore.Configurations;
 using Senai.TCC.Catalog.Domain.Entities;
+using Senai.TCC.Catalog.Persistence.Postgres.EFCore.Configurations;
 
-namespace Senai.Catalog.Persistence.Postgres.EFCore;
+namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore;
 
 public class PostgresCatalogDbContext : DbContext
 {

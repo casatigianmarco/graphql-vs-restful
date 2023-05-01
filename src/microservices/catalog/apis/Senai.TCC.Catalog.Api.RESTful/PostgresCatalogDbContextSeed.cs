@@ -7,7 +7,7 @@ using Polly;
 using Polly.Retry;
 using Senai.TCC.Base.Extensions;
 using Senai.TCC.Catalog.Domain.Entities;
-using Senai.Catalog.Persistence.Postgres.EFCore;
+using Senai.TCC.Catalog.Persistence.Postgres.EFCore;
 
 namespace Senai.TCC.Catalog.Api.RESTful;
 
