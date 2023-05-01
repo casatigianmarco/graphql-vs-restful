@@ -35,11 +35,10 @@ try {
     using var scope = app.Services.CreateScope();
     var context = scope.ServiceProvider.GetRequiredService<PostgresCatalogDbContext>();
     var env = app.Services.GetService<IWebHostEnvironment>();
-    // var settings = app.Services.GetService<IOptions<CatalogSettings>>();
-    // var logger = app.Services.GetService<ILogger<CatalogDbContextSeed>>();
+    var settings = app.Services.GetService<IOptions<CatalogSettings>>();
+    var logger = app.Services.GetService<ILogger<PostgresCatalogDbContextSeed>>();
     await context.Database.MigrateAsync();
-    //
-    // await new CatalogDbContextSeed().SeedAsync(context, env, settings, logger);
+    await new PostgresCatalogDbContextSeed().SeedAsync(context, env, settings, logger);
     app.Logger.LogInformation("Starting web host ({ApplicationName})...", appName);
     await app.RunAsync();
     return 0;
