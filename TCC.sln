@@ -15,21 +15,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E641ADE4-3C1
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Catalog.Domain", "src\microservices\catalog\domain\TCC.Catalog.Domain\TCC.Catalog.Domain.csproj", "{A88EF862-113B-4B0C-A274-8A4F958571FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.TCC.Catalog.Domain", "src\microservices\catalog\domain\Senai.TCC.Catalog.Domain\Senai.TCC.Catalog.Domain.csproj", "{A88EF862-113B-4B0C-A274-8A4F958571FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Catalog.Application", "src\microservices\catalog\domain\TCC.Catalog.Application\TCC.Catalog.Application.csproj", "{833D500C-6954-4C96-A44A-FEAB34FCCDED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.TCC.Catalog.Application", "src\microservices\catalog\domain\Senai.TCC.Catalog.Application\Senai.TCC.Catalog.Application.csproj", "{833D500C-6954-4C96-A44A-FEAB34FCCDED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Catalog.Persistence.SqlServer.EntityFrameworkCore", "src\microservices\catalog\persistence\TCC.Catalog.Persistence.SqlServer.EntityFrameworkCore\TCC.Catalog.Persistence.SqlServer.EntityFrameworkCore.csproj", "{A4DD9FED-D870-44EA-B1EB-4739EE463B4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.TCC.Catalog.Persistence.SqlServer.EFCore", "src\microservices\catalog\persistence\Senai.TCC.Catalog.Persistence.SqlServer.EFCore\Senai.TCC.Catalog.Persistence.SqlServer.EFCore.csproj", "{A4DD9FED-D870-44EA-B1EB-4739EE463B4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Catalog.Api.GraphQL", "src\microservices\catalog\apis\TCC.Catalog.Api.GraphQL\TCC.Catalog.Api.GraphQL.csproj", "{CED45E8C-F764-4A99-B04D-623EB97EC598}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.TCC.Catalog.Api.GraphQL", "src\microservices\catalog\apis\Senai.TCC.Catalog.Api.GraphQL\Senai.TCC.Catalog.Api.GraphQL.csproj", "{CED45E8C-F764-4A99-B04D-623EB97EC598}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Catalog.Api.RESTful", "src\microservices\catalog\apis\TCC.Catalog.Api.RESTful\TCC.Catalog.Api.RESTful.csproj", "{4483CE1B-3101-4CA9-BB15-D7067B92CF6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.TCC.Catalog.Api.RESTful", "src\microservices\catalog\apis\Senai.TCC.Catalog.Api.RESTful\Senai.TCC.Catalog.Api.RESTful.csproj", "{4483CE1B-3101-4CA9-BB15-D7067B92CF6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Catalog.Persistence.Postgres.EntityFrameworkCore", "src\microservices\catalog\persistence\TCC.Catalog.Persistence.Postgres.EntityFrameworkCore\TCC.Catalog.Persistence.Postgres.EntityFrameworkCore.csproj", "{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.Catalog.Persistence.Postgres.EFCore", "src\microservices\catalog\persistence\Senai.Catalog.Persistence.Postgres.EFCore\Senai.Catalog.Persistence.Postgres.EFCore.csproj", "{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{06F934C9-6D89-4C7B-B6F6-9B9882A340F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Base", "src\TCC.Base\TCC.Base.csproj", "{6BD08A1E-A973-4C13-A9B7-BAA98C97D9D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senai.TCC.Base", "src\shared\Senai.TCC.Base\Senai.TCC.Base.csproj", "{9BC03548-D54A-4AB0-86C6-BAC890C310C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +61,10 @@ Global
 		{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A448AEE-30ED-436F-AD6E-CCCE19C6E952}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BD08A1E-A973-4C13-A9B7-BAA98C97D9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BD08A1E-A973-4C13-A9B7-BAA98C97D9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BD08A1E-A973-4C13-A9B7-BAA98C97D9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BD08A1E-A973-4C13-A9B7-BAA98C97D9D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC03548-D54A-4AB0-86C6-BAC890C310C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC03548-D54A-4AB0-86C6-BAC890C310C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC03548-D54A-4AB0-86C6-BAC890C310C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC03548-D54A-4AB0-86C6-BAC890C310C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{66C0E1EA-F37F-4BEB-9D7B-B8175ABCA214} = {EA5EDC6A-34F2-4E2F-BEBB-4CA58CB62448}
@@ -79,6 +79,6 @@ Global
 		{4483CE1B-3101-4CA9-BB15-D7067B92CF6C} = {DB141DA1-8E37-40E7-A892-52111CDFDE70}
 		{8A448AEE-30ED-436F-AD6E-CCCE19C6E952} = {CCA0162C-9650-462A-A25B-77C3DD16FD7B}
 		{06F934C9-6D89-4C7B-B6F6-9B9882A340F9} = {E641ADE4-3C16-4DBD-BF2D-953EED665574}
-		{6BD08A1E-A973-4C13-A9B7-BAA98C97D9D5} = {06F934C9-6D89-4C7B-B6F6-9B9882A340F9}
+		{9BC03548-D54A-4AB0-86C6-BAC890C310C3} = {06F934C9-6D89-4C7B-B6F6-9B9882A340F9}
 	EndGlobalSection
 EndGlobal
