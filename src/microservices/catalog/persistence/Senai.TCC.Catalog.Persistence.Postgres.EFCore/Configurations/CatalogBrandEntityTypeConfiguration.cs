@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Senai.TCC.Catalog.Domain.Entities;
 
-namespace Senai.Catalog.Persistence.Postgres.EFCore.Configurations;
+namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore.Configurations;
 
 public class CatalogBrandEntityTypeConfiguration : IEntityTypeConfiguration<CatalogBrand>
 {

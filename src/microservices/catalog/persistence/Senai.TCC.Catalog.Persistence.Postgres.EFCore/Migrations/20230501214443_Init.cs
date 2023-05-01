@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Senai.Catalog.Persistence.Postgres.EFCore.Migrations
+namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore.Migrations
 {
     /// <inheritdoc />
     public partial class Init : Migration

@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using Senai.Catalog.Persistence.Postgres.EFCore;
+using Senai.TCC.Catalog.Persistence.Postgres.EFCore;
 
 #nullable disable
 
-namespace Senai.Catalog.Persistence.Postgres.EFCore.Migrations
+namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore.Migrations
 {
     [DbContext(typeof(PostgresCatalogDbContext))]
     partial class PostgresCatalogDbContextModelSnapshot : ModelSnapshot

@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Senai.Catalog.Persistence.Postgres.EFCore;
+namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore;
 
 public static class PostgresPersistenceConfiguratorHelper
 {

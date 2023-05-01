@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Senai.TCC.Catalog.Api.RESTful;
-using Senai.Catalog.Persistence.Postgres.EFCore;
+using Senai.TCC.Catalog.Persistence.Postgres.EFCore;
 
 const string appName = "Catalog.API";
 var builder = WebApplication.CreateBuilder(args);
