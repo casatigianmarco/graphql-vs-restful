@@ -26,3 +26,7 @@ dotnet ef migrations add <MigrationName>
 cd TCC.Catalog.Persistence.Postgres.EntityFrameworkCore
 dotnet ef migrations remove
 ```
+
+# ER Model
+
+![](../../../../../img/catalogdb-er-diagram.png)
