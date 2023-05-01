@@ -11,13 +11,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Senai.TCC.Catalog.Shared\Senai.TCC.Catalog.Shared.csproj" />
       <ProjectReference Include="..\Senai.TCC.Catalog.Domain\Senai.TCC.Catalog.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Commands\" />
       <Folder Include="Handlers\" />
-      <Folder Include="Queries\" />
     </ItemGroup>
 
 </Project>
