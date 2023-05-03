@@ -1,6 +1,7 @@
 using System.Net;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Senai.TCC.Catalog.Application.Commands;
 using Senai.TCC.Catalog.Application.Queries;
 using Senai.TCC.Catalog.Domain.Entities;
 using Senai.TCC.Catalog.Shared.Dto;
@@ -51,5 +52,46 @@ public class CatalogController : ControllerBase
         }
 
         return NotFound();
+    }
+    
+    //PUT api/v1/[controller]/items
+    [Route("items/{id:int}")]
+    [HttpPut]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
+    [ProducesResponseType((int)HttpStatusCode.Created)]
+    public async Task<ActionResult> UpdateProductAsync(int id, [FromBody] UpdateCatalogItemDto productToUpdate, CancellationToken cancellationToken)
+    {
+        var item = await _mediator.Send(new UpdateCatalogItemCommand(id, productToUpdate), cancellationToken);
+        if (item == null)
+        {
+            return NotFound();
+        }
+        return Ok(item);
+    }
+
+    //POST api/v1/[controller]/items
+    [Route("items")]
+    [HttpPost]
+    [ProducesResponseType((int)HttpStatusCode.Created)]
+    public async Task<ActionResult> CreateProductAsync([FromBody] CreateCatalogItemDto product, CancellationToken cancellationToken)
+    {
+        var item = await _mediator.Send(new CreateCatalogItemCommand(product), cancellationToken);
+        return Ok(item);
+    }
+
+    //DELETE api/v1/[controller]/items/id
+    [Route("items/{id}")]
+    [HttpDelete]
+    [ProducesResponseType((int)HttpStatusCode.NoContent)]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
+    public async Task<ActionResult> DeleteProductAsync(int id, CancellationToken cancellationToken)
+    {
+        var item = await _mediator.Send(new DeleteCatalogItemCommand(id), cancellationToken);
+        if (item == null)
+        {
+            return NotFound();
+        }
+        
+        return NoContent();
     }
 }

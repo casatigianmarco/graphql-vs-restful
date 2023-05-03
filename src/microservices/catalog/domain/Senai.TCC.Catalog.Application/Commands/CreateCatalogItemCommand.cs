@@ -4,7 +4,7 @@ using Senai.TCC.Catalog.Shared.ViewModel;
 
 namespace Senai.TCC.Catalog.Application.Commands;
 
-public class CreateCatalogItemCommand : IRequest<CatalogItemViewModel>
+public class CreateCatalogItemCommand : IRequest<CatalogItemViewModel?>
 {
     public CreateCatalogItemCommand(CreateCatalogItemDto catalogItemDto)
     {

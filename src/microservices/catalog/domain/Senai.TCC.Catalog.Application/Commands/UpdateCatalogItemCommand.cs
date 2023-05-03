@@ -4,7 +4,7 @@ using Senai.TCC.Catalog.Shared.ViewModel;
 
 namespace Senai.TCC.Catalog.Application.Commands;
 
-public class UpdateCatalogItemCommand : IRequest<CatalogItemViewModel>
+public class UpdateCatalogItemCommand : IRequest<CatalogItemViewModel?>
 {
     public UpdateCatalogItemCommand(int catalogItemId, UpdateCatalogItemDto catalogItemDto)
     {
