@@ -4,11 +4,11 @@ using Senai.TCC.Catalog.Domain.Repositories;
 
 namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore.Repositories;
 
-public class CatalogRepository : ICatalogRepository
+public class PostgresCatalogRepository : ICatalogRepository
 {
     private readonly PostgresCatalogDbContext _postgresCatalogDbContext;
 
-    public CatalogRepository(PostgresCatalogDbContext postgresCatalogDbContext)
+    public PostgresCatalogRepository(PostgresCatalogDbContext postgresCatalogDbContext)
     {
         _postgresCatalogDbContext = postgresCatalogDbContext;
     }

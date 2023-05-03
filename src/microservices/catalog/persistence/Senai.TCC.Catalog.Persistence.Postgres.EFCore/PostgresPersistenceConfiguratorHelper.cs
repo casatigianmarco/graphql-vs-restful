@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Senai.TCC.Catalog.Domain.Repositories;
+using Senai.TCC.Catalog.Persistence.Postgres.EFCore.Repositories;
 
 namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore;
 
@@ -21,6 +23,7 @@ public static class PostgresPersistenceConfiguratorHelper
                     });
             });
 
+        services.AddScoped<ICatalogRepository, PostgresCatalogRepository>();
         return services;
     }
 }
