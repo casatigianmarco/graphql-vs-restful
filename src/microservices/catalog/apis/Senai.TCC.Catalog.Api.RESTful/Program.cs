@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Senai.TCC.Catalog.Api.RESTful;
+using Senai.TCC.Catalog.Application;
 using Senai.TCC.Catalog.Persistence.Postgres.EFCore;
 
 const string appName = "Catalog.API";
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddPostgresCatalogDbContext(builder.Configuration);
+builder.Services.AddCatalogApplication();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
