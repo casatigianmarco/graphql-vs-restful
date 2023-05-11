@@ -18,6 +18,7 @@ public class ReadCatalogItemsQueryHandler : IRequestHandler<ReadCatalogItemsQuer
     public async Task<IEnumerable<CatalogItemViewModel>?> Handle(ReadCatalogItemsQuery request,
         CancellationToken cancellationToken)
     {
-        return (await _catalogRepository.GetCatalogItems(cancellationToken))?.Select(x => x.ToViewModel()).ToList();
+        var itens = await _catalogRepository.GetCatalogItems(cancellationToken);
+        return itens?.Select(x => x.ToViewModel()).ToList();
     }
 }

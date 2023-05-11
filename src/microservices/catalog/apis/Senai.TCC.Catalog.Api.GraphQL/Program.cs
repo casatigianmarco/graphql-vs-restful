@@ -1,25 +1,31 @@
+using GraphQL;
+using GraphQL.MicrosoftDI;
+using GraphQL.Types;
+using Senai.TCC.Catalog.Api.GraphQL.GraphQL;
+using Senai.TCC.Catalog.Application;
+using Senai.TCC.Catalog.Persistence.Postgres.EFCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddPostgresCatalogDbContext(builder.Configuration);
+builder.Services.AddCatalogApplication();
+builder.Services.AddSingleton<ISchema, CatalogSchema>(services =>
+    new CatalogSchema(new SelfActivatingServiceProvider(services)));
+builder.Services.AddGraphQL(graphQlBuilder => graphQlBuilder
+    .AddSystemTextJson());
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseGraphQL<ISchema>();
 
-app.MapControllers();
+app.UseGraphQLPlayground();
 
 app.Run();

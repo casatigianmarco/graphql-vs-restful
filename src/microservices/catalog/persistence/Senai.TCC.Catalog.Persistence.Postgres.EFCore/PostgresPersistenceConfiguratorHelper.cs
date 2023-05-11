@@ -8,9 +8,10 @@ namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore;
 
 public static class PostgresPersistenceConfiguratorHelper
 {
-    public static IServiceCollection AddPostgresCatalogDbContext(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddPostgresCatalogDbContext(this IServiceCollection services,
+        IConfiguration configuration)
     {
-        services.AddEntityFrameworkNpgsql()
+        services
             .AddDbContext<PostgresCatalogDbContext>(options =>
             {
                 options.UseNpgsql(configuration["PostgresDbContextSettings:ConnectionString"],
@@ -21,7 +22,7 @@ public static class PostgresPersistenceConfiguratorHelper
                         postgresOptions.EnableRetryOnFailure(maxRetryCount: 15, maxRetryDelay: TimeSpan.FromSeconds(30),
                             errorCodesToAdd: new List<string> { "Migrations failed" });
                     });
-            });
+            }, ServiceLifetime.Singleton, ServiceLifetime.Singleton);
 
         services.AddScoped<ICatalogRepository, PostgresCatalogRepository>();
         return services;
