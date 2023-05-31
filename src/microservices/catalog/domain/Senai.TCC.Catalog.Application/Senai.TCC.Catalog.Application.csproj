@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Senai.TCC.Catalog.Shared\Senai.TCC.Catalog.Shared.csproj" />
+      <ProjectReference Include="..\..\shared\Senai.TCC.Catalog.Shared\Senai.TCC.Catalog.Shared.csproj" />
       <ProjectReference Include="..\Senai.TCC.Catalog.Domain\Senai.TCC.Catalog.Domain.csproj" />
     </ItemGroup>
 

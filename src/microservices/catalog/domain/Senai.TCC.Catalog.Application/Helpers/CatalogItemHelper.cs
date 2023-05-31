@@ -23,7 +23,9 @@ public static class CatalogItemHelper
             Description = catalogItem.Description,
             Name = catalogItem.Name,
             PictureFileName = catalogItem.PictureFileName,
-            Price = catalogItem.Price
+            Price = catalogItem.Price,
+            // CatalogBrandId = catalogItem.CatalogBrandId,
+            // CatalogTypeId = catalogItem.CatalogTypeId
         };
     }
 }
