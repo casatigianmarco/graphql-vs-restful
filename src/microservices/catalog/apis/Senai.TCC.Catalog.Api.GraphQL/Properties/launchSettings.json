@@ -9,14 +9,15 @@
     }
   },
   "profiles": {
-    "TCC.Catalog.Api.GraphQL": {
+    "TCC.Catalog.Api.GraphQL:local": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "ui/playground",
       "applicationUrl": "https://localhost:7102;http://localhost:5073",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "PostgresDbContextSettings:ConnectionString": "User ID=postgres;Password=tccsenaipa55w0rd;Host=localhost;Port=5432;Database=catalog;Pooling=true;"
       }
     },
     "IIS Express": {

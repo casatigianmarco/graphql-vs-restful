@@ -51,9 +51,54 @@ public class PostgresCatalogRepository : ICatalogRepository
         return await catalogItemsQueryable.ToListAsync(cancellationToken);
     }
 
-    public IQueryable<CatalogItem> GetCatalogItemsQueryable()
+    public async Task<IEnumerable<CatalogBrand>?> GetCatalogBrands(CancellationToken cancellationToken, bool asNoTracking = true,
+        IEnumerable<int>? catalogBrandIds = null)
+    {
+        var catalogBrandsQueryable = GetCatalogBrandsQueryable();
+        if (asNoTracking)
+        {
+            catalogBrandsQueryable = catalogBrandsQueryable.AsNoTracking();
+        }
+
+        var brandIds = catalogBrandIds?.ToList();
+        if (brandIds is not null && brandIds.Any())
+        {
+            catalogBrandsQueryable = catalogBrandsQueryable.Where(c => brandIds.Contains(c.Id));
+        }
+
+        return await catalogBrandsQueryable.ToListAsync(cancellationToken);
+    }
+
+    public async Task<IEnumerable<CatalogType>?> GetCatalogTypes(CancellationToken cancellationToken, bool asNoTracking = true, IEnumerable<int>? catalogTypeIds = null)
+    {
+        var catalogTypesQueryable = GetCatalogTypesQueryable();
+        if (asNoTracking)
+        {
+            catalogTypesQueryable = catalogTypesQueryable.AsNoTracking();
+        }
+
+        var brandIds = catalogTypeIds?.ToList();
+        if (brandIds is not null && brandIds.Any())
+        {
+            catalogTypesQueryable = catalogTypesQueryable.Where(c => brandIds.Contains(c.Id));
+        }
+
+        return await catalogTypesQueryable.ToListAsync(cancellationToken);
+    }
+
+    private IQueryable<CatalogItem> GetCatalogItemsQueryable()
     {
         return _postgresCatalogDbContext.CatalogItems.AsQueryable();
+    }
+
+    private IQueryable<CatalogBrand> GetCatalogBrandsQueryable()
+    {
+        return _postgresCatalogDbContext.CatalogBrands.AsQueryable();
+    }
+
+    private IQueryable<CatalogType> GetCatalogTypesQueryable()
+    {
+        return _postgresCatalogDbContext.CatalogTypes.AsQueryable();
     }
 
     public async Task<CatalogItem> UpdateCatalogItem(CatalogItem catalogItem, CancellationToken cancellationToken)

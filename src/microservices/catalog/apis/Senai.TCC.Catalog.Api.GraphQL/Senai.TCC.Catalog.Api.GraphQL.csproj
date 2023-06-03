@@ -7,13 +7,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="GraphQL" Version="7.3.1" />
+        <PackageReference Include="GraphQL" Version="7.4.1" />
+        <PackageReference Include="GraphQL.DataLoader" Version="7.4.0" />
+        <PackageReference Include="GraphQL.MicrosoftDI" Version="7.4.1" />
+        <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="7.4.0" />
+        <PackageReference Include="GraphQL.Server.Ui.Playground" Version="7.4.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\domain\Senai.TCC.Catalog.Application\Senai.TCC.Catalog.Application.csproj" />
+      <ProjectReference Include="..\..\persistence\Senai.TCC.Catalog.Persistence.Postgres.EFCore\Senai.TCC.Catalog.Persistence.Postgres.EFCore.csproj" />
       <ProjectReference Include="..\..\persistence\Senai.TCC.Catalog.Persistence.SqlServer.EFCore\Senai.TCC.Catalog.Persistence.SqlServer.EFCore.csproj" />
+      <ProjectReference Include="..\..\shared\Senai.TCC.Catalog.Shared\Senai.TCC.Catalog.Shared.csproj" />
     </ItemGroup>
 
 </Project>
