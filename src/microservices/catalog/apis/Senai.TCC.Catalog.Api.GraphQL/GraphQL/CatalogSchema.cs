@@ -7,5 +7,6 @@ public class CatalogSchema : Schema
     public CatalogSchema(IServiceProvider provider) : base(provider)
     {
         Query = provider.GetRequiredService<CatalogQuery>();
+        Mutation = provider.GetRequiredService<CatalogMutation>();
     }
 }

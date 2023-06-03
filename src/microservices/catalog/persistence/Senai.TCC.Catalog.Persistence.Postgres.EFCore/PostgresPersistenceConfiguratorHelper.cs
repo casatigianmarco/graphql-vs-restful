@@ -22,7 +22,7 @@ public static class PostgresPersistenceConfiguratorHelper
                         postgresOptions.EnableRetryOnFailure(maxRetryCount: 15, maxRetryDelay: TimeSpan.FromSeconds(30),
                             errorCodesToAdd: new List<string> { "Migrations failed" });
                     });
-            }, ServiceLifetime.Singleton, ServiceLifetime.Singleton);
+            }, ServiceLifetime.Singleton, ServiceLifetime.Transient);
 
         services.AddScoped<ICatalogRepository, PostgresCatalogRepository>();
         return services;
