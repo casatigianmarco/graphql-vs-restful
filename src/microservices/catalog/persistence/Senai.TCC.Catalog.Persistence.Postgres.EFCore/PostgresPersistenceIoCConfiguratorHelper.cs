@@ -6,7 +6,7 @@ using Senai.TCC.Catalog.Persistence.Postgres.EFCore.Repositories;
 
 namespace Senai.TCC.Catalog.Persistence.Postgres.EFCore;
 
-public static class PostgresPersistenceConfiguratorHelper
+public static class PostgresPersistenceIoCConfiguratorHelper
 {
     public static IServiceCollection AddPostgresCatalogDbContext(this IServiceCollection services,
         IConfiguration configuration)

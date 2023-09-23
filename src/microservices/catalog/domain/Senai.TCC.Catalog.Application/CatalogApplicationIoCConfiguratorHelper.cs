@@ -2,7 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Senai.TCC.Catalog.Application;
 
-public static class CatalogApplicationConfiguratorHelper
+public static class CatalogApplicationIoCConfiguratorHelper
 {
     public static IServiceCollection AddCatalogApplication(this IServiceCollection services)
     {
