@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="11.5.2" />
       <PackageReference Include="MediatR" Version="12.0.1" />
     </ItemGroup>
 
@@ -14,10 +15,6 @@
       <ProjectReference Include="..\..\Senai.TCC.Catalog.Shared\Senai.TCC.Catalog.Shared.csproj" />
       <ProjectReference Include="..\..\shared\Senai.TCC.Catalog.Shared\Senai.TCC.Catalog.Shared.csproj" />
       <ProjectReference Include="..\Senai.TCC.Catalog.Domain\Senai.TCC.Catalog.Domain.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Validations\" />
     </ItemGroup>
 
 </Project>
